@@ -3,7 +3,7 @@
 function saudacao(): string
 {
     echo $hora = date('H;i;s');
-    $saudacao = '';
+    $saudacao = 's';
 
     if ($hora >= 0 && $hora <= 5) {
         $saudacao = 'boa madrugada';
