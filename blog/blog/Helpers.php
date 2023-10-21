@@ -1,4 +1,20 @@
 <?php
+/*
+function formartarValor(float $valor): string
+{
+    return number_format($valor, 2, ',', '.');
+}
+*/
+function formartarValor(float $valor): string
+{
+    return 'R$:' . number_format(($valor ? $valor : 0), 2, ',', '.');
+}
+
+function formatarNumero(string $num = null): string
+{
+    return number_format($num ? $num : 0, 0, '.', '.');
+}
+
 
 function saudacao(): string
 {
