@@ -10,7 +10,7 @@ function formartarValor(float $valor): string
     return 'R$:' . number_format(($valor ? $valor : 0), 2, ',', '.');
 }
 
-function formatarNumero(string $num = null): string
+function formatarNumero(int $num = null): string
 {
     return number_format($num ? $num : 0, 0, '.', '.');
 }
