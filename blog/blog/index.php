@@ -5,6 +5,4 @@ require_once 'sistema/configuracao.php';
 include_once 'Helpers.php';
 
 
-$data  = date('d/m/Y H:i:s');
-
-echo $data;
+echo contarTempo('2023-10-19 23:20:15');
