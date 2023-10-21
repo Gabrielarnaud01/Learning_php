@@ -4,18 +4,8 @@
     require_once 'sistema/configuracao.php';
     include_once 'Helpers.php';
 
+    $url = 'http://unset.com';
 
-    if (validarEmail('teste')) {
-        echo 'endereço de e-mail valido';
-    } else {
-        echo 'endereço de e-mail incorreto';
-    }
+    var_dump(validarUrl($url));
     echo '<br>';
-    if (validarUrl('teste')) {
-        echo 'endereço de Url valido';
-    } else {
-        echo 'endereço de Url incorreto';
-    }
-    echo '<br>';
-
-    var_dump(validarEmail('dale.com'));
+    var_dump(validarUrlComFiltro($url));
