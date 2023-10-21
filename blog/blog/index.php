@@ -4,4 +4,8 @@
     require_once 'sistema/configuracao.php';
     include_once 'Helpers.php';
 
-    echo SITE_NOME;
+    var_dump($_SERVER);
+    echo "<br>";
+    var_dump(localhost());
+    echo "<br>";
+    echo url('/novas');

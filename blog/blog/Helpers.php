@@ -6,6 +6,32 @@ function formartarValor(float $valor): string
 }
 */
 
+function url(string $url): string
+{
+    $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
+    $servidor = 'localhost'; //gambiarra porque o meu não esta funcionando
+    echo "<br><h1>servidor nome:</h1>" . $servidor . "<br>";
+    $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO :  URL_PRODUCAO);
+
+    if (str_starts_with($url, '/')) {
+        return $ambiente . $url;
+    }
+
+    return $ambiente . '/' . $url;
+}
+
+
+function localhost(): bool
+{
+    $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
+
+    if ($servidor == 'localhost') {
+        return true;
+    }
+
+    return false;
+}
+
 
 function validarUrl(string $url): bool
 {
@@ -20,22 +46,6 @@ function validarUrl(string $url): bool
     }
     return true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
