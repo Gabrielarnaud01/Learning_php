@@ -6,6 +6,21 @@ function formartarValor(float $valor): string
 }
 */
 
+function dataAtual(): string
+{
+    $diaMes = date('d');
+    $diaSemana = date('w');
+    $mes = date('n');
+    $ano = date('Y');
+
+    $nomeDiasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sabádo'];
+    $nomeDosMeses = ['Janeiro', 'Fevereiro', 'Março', 'Maio', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
+    $dataFormatada = $nomeDiasDaSemana[$diaSemana] . ', ' . $diaMes . ' de ' . $nomeDosMeses[$mes] . ' de ' . $ano;
+
+    return $dataFormatada;
+}
+
 function url(string $url): string
 {
     $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
