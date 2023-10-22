@@ -7,6 +7,16 @@ include './sistema/Nucleo/Mensagem.php';
 
 //echo (new Mensagem())->erro('mensagem de erro')->renderizar();
 
-echo (new Mensagem())->sucesso('texto de sucesso');
+use sistema\Nucleo\Mensagem;
+//use sistema\Nucleo\Mensagem as msg;
+//echo (new msg)->sucesso('texto de sucesso');
+
+
+//teremos o mesmo resultado se tirar o use.
+//echo (new \sistema\Nucleo\Mensagem)->sucesso('texto de sucesso');
+echo (new Mensagem)->sucesso('texto de sucesso');
+
+
+
 
 echo '<hr>';
