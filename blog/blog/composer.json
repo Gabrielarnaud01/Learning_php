@@ -1,0 +1,20 @@
+{
+    "name": "ceounset/cursophp8",
+    "description": "Curso de PHP 8",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "sistema\\": "sistema/"
+        },
+        "file": [
+            "sistema/configuracao.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Gabriel Arnaud",
+            "email": "gabriel.arnaud30@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
