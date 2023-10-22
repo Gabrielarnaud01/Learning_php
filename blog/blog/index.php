@@ -7,6 +7,7 @@
 
     $msg = new Mensagem();
     echo '<hr>';
-    echo $msg->texto = 'texto de teste';
+    echo $msg->renderizar();
     echo '<hr>';
+
     var_dump($msg);
