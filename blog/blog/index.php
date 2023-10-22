@@ -3,9 +3,10 @@
 
     require_once 'sistema/configuracao.php';
     include_once 'Helpers.php';
+    include './sistema/Nucleo/Mensagem.php';
 
-    $cpf = '004.348.491-38';
-
-    var_dump(validarCpf($cpf));
-
-    //echo $limparNumero = preg_replace('/[^0-9]/', '', $cpf);
+    $msg = new Mensagem();
+    echo '<hr>';
+    echo $msg->texto = 'texto de teste';
+    echo '<hr>';
+    var_dump($msg);
