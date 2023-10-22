@@ -4,25 +4,12 @@
 require_once 'sistema/configuracao.php';
 include_once './sistema/Nucleo/Helpers.php';
 include './sistema/Nucleo/Mensagem.php';
+include './sistema/Nucleo/Controlador.php';
+
 
 use sistema\Nucleo\Helpers;
-
-//echo (new Mensagem())->erro('mensagem de erro')->renderizar();
-
-//use sistema\Nucleo\Mensagem;
-//use sistema\Nucleo\Mensagem as msg;
-//echo (new msg)->sucesso('texto de sucesso');
+use sistema\Nucleo\Controlador;
 
 
-//teremos o mesmo resultado se tirar o use.
-//echo (new \sistema\Nucleo\Mensagem)->sucesso('texto de sucesso');
-//echo (new Mensagem)->sucesso('texto de sucesso');
-
-/*
-$helper = new Helpers();
-echo $helper->validarCpf('45664554');
-echo '<hr>';
-*/
-
-echo Helpers::saudacao();
-echo Helpers::limparNumero('123123123214354235346');
+$controlador = new Controlador('admin');
+var_dump($controlador);
