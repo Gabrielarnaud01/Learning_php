@@ -4,10 +4,9 @@
 require_once 'sistema/configuracao.php';
 include_once 'Helpers.php';
 include './sistema/Nucleo/Mensagem.php';
-$msg = new Mensagem();
+
+//echo (new Mensagem())->erro('mensagem de erro')->renderizar();
+
+echo (new Mensagem())->sucesso('texto de sucesso');
+
 echo '<hr>';
-echo $msg->sucesso('Mensagem de sucesso')->renderizar();
-echo '<hr>';
-echo $msg->erro('Mensagem de erro')->renderizar();
-echo '<hr>';
-var_dump($msg);
