@@ -12,3 +12,5 @@ define('SITE_DESCRICAO', 'Alba Music - Alba musicas e fonos');
 //urls do sistema
 define('URL_PRODUCAO', 'https://albamusic.com.br');
 define('URL_DESENVOLVIMENTO', 'https://localhost/blog');
+
+define('URL_SITE', 'blog/');

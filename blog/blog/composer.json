@@ -6,7 +6,7 @@
         "psr-4": {
             "sistema\\": "sistema/"
         },
-        "file": [
+        "files": [
             "sistema/configuracao.php"
         ]
     },
@@ -16,5 +16,9 @@
             "email": "gabriel.arnaud30@gmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0",
+        "pecee/simple-router": "dev-master"
+    }
 }

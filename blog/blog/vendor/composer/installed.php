@@ -19,5 +19,16 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'pecee/simple-router' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'cd891d53349e878e1b577d720ae28d570110eb47',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pecee/simple-router',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
     ),
 );

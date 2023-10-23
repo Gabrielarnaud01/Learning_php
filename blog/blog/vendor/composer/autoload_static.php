@@ -6,10 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit3817a57a3a30f61da8898aff80e9cf10
 {
+    public static $files = array (
+        '149b6c21bff7872fb6210bc48074d8b1' => __DIR__ . '/../..' . '/sistema/configuracao.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
             'sistema\\' => 8,
+        ),
+        'P' => 
+        array (
+            'Pecee\\' => 6,
         ),
     );
 
@@ -17,6 +25,10 @@ class ComposerStaticInit3817a57a3a30f61da8898aff80e9cf10
         'sistema\\' => 
         array (
             0 => __DIR__ . '/../..' . '/sistema',
+        ),
+        'Pecee\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pecee/simple-router/src/Pecee',
         ),
     );
 
