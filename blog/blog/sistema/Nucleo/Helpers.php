@@ -51,11 +51,11 @@ class Helpers
         return $dataFormatada;
     }
 
-    public static function url(string $url): string
+    public static function url(string $url = null): string
     {
         $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
         $servidor = 'localhost'; //gambiarra porque o meu não esta funcionando
-        echo "<br><h1>servidor nome:</h1>" . $servidor . "<br>";
+        //echo "<br><h1>servidor nome:</h1>" . $servidor . "<br>";
         $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO :  URL_PRODUCAO);
 
         if (str_starts_with($url, '/')) {
@@ -160,14 +160,14 @@ class Helpers
 
     public static function saudacao(): string
     {
-        $hora = date('H;i;s');
-        $saudacao = '';
+        $hora = date('H');
+        $saudacao = 'TESTE';
 
-        if ($hora >= 0 && $hora <= 5) {
+        if ($hora >= 0 and $hora <= 5) {
             $saudacao = 'boa madrugada';
-        } elseif ($hora >= 6 && $hora <= 12) {
+        } elseif ($hora >= 6 and $hora <= 12) {
             $saudacao = 'bom dia';
-        } elseif ($hora >= 13 && $hora <= 18) {
+        } elseif ($hora >= 13 and $hora <= 18) {
             $saudacao = 'boa tarde';
         } else {
             $saudacao = 'boa noite';
