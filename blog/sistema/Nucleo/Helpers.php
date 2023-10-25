@@ -6,13 +6,24 @@ use Exception;
 
 class Helpers
 {
-
     /*
     public static function formartarValor(float $valor): string
     {
         return number_format($valor, 2, ',', '.');
     }
     */
+
+    public static function redirecionar(string $url = null): void
+    {
+        header('HTTP/1.1 302 Found');
+
+        $local = ($url ? self::url($url) : self::url());
+
+        header("Location: {$local}");
+        exit();
+    }
+
+
     public static function validarCpf(string $cpf): bool
     {
         $cpf = self::limparNumero($cpf);
