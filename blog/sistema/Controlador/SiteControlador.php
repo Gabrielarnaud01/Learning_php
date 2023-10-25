@@ -15,7 +15,7 @@ class SiteControlador extends Controlador
     public function index(): void
     {
         echo $this->template->renderizar('index.html', [
-            'titulo' => 'teste titulo',
+            'titulo' => 'Alba Miranda',
             'subtitulo' => 'teste de subtitulo'
         ]);
     }
@@ -23,7 +23,7 @@ class SiteControlador extends Controlador
     public function sobre(): void
     {
         echo $this->template->renderizar('sobre.html', [
-            'titulo' => 'teste titulo da pagina sobre',
+            'titulo' => 'Sobre mim',
             'subtitulo' => 'teste de subtitulo'
         ]);
     }

@@ -55,7 +55,7 @@ class Helpers
     {
         $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
         //gambiarra porque o meu não esta funcionando
-
+        $servidor = 'localhost';
         $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
 
         if (str_starts_with($url, '/')) {
