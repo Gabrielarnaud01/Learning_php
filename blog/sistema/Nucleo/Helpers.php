@@ -54,9 +54,9 @@ class Helpers
     public static function url(string $url = null): string
     {
         $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
-        $servidor = 'localhost'; //gambiarra porque o meu não esta funcionando
-        //echo "<br><h1>servidor nome:</h1>" . $servidor . "<br>";
-        $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO :  URL_PRODUCAO);
+        //gambiarra porque o meu não esta funcionando
+
+        $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
 
         if (str_starts_with($url, '/')) {
             return $ambiente . $url;
