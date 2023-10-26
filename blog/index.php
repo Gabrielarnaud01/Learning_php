@@ -1,9 +1,13 @@
 <?php
 //Arquivo index responsável pela inicialização do sistem
 
+require 'vendor/autoload.php';
+
 use sistema\Nucleo\Helpers;
 use sistema\Nucleo\Controlador;
 
+use sistema\Nucleo\Conexao;
 
-require 'vendor/autoload.php';
-require 'rotas.php';
+$con = Conexao::getInstancia();
+
+//require 'rotas.php';
