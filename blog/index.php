@@ -3,11 +3,11 @@
 
 require 'vendor/autoload.php';
 
-use sistema\Nucleo\Helpers;
-use sistema\Nucleo\Controlador;
-
-use sistema\Nucleo\Conexao;
-
-$con = Conexao::getInstancia();
-
 //require 'rotas.php';
+use sistema\Modelo\PostModelo;
+
+$posts = (new PostModelo())->ler();
+
+foreach ($posts as $post) {
+    echo $post->titulo . "<br>";
+}
